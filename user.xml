@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<tryton>
+    <data>
+        <!-- res.user -->
+        <record model="ir.ui.view" id="res_user_form_view">
+            <field name="model">res.user</field>
+            <field name="type">form</field>
+            <field name="priority" eval="30"/>
+            <field name="name">res_user_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_res_user">
+            <field name="name">User Preferences</field>
+            <field name="res_model">res.user</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_res_user_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="res_user_form_view"/>
+            <field name="act_window" ref="act_res_user"/>
+        </record>
+        <record model="ir.action.wizard" id="act_open_user_preferences">
+            <field name="name">Login User Preferences</field>
+            <field name="wiz_name">open.user.preferences</field>
+        </record>
+    </data>
+    <data depends="sale_shop">
+        <record model="ir.ui.view" id="res_user_shop_form_view">
+            <field name="model">res.user</field>
+            <field name="inherit" ref="res_user_form_view"/>
+            <field name="name">res_user_shop_form</field>
+        </record>
+    </data>
+    <data depends="sale_payment">
+        <record model="ir.ui.view" id="res_user_payment_form_view">
+            <field name="model">res.user</field>
+            <field name="inherit" ref="res_user_form_view"/>
+            <field name="name">res_user_payment_form</field>
+        </record>
+    </data>
+    <data depends="stock_cart">
+        <record model="ir.ui.view" id="res_user_cart_form_view">
+            <field name="model">res.user</field>
+            <field name="inherit" ref="res_user_form_view"/>
+            <field name="name">res_user_cart_form</field>
+        </record>
+    </data>
+    <data depends="company_subdivision">
+        <record model="ir.ui.view" id="res_user_subdivision_form_view">
+            <field name="model">res.user</field>
+            <field name="inherit" ref="res_user_form_view"/>
+            <field name="name">res_user_subdivision_form</field>
+        </record>
+    </data>
+</tryton>

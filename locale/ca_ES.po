@@ -1,0 +1,19 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "model:ir.action,name:act_open_user_preferences"
+msgid "Login User Preferences"
+msgstr "Preferències de l'usuari a la identificació"
+
+msgctxt "model:ir.action,name:act_res_user"
+msgid "Login User Preferences"
+msgstr "Preferències de l'usuari a la identificació"
+
+msgctxt "wizard_button:open.user.preferences,start,end:"
+msgid "Cancel"
+msgstr "Cancel·la"
+
+msgctxt "wizard_button:open.user.preferences,start,save:"
+msgid "Save"
+msgstr "Guarda"
